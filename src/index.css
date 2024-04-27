@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+
+    background-color: #040714;
+    color: white;
+    font-family: Avenir-roman, sans-serif;
+}
+
+@media only screen and (min-width:768px) {
+    body{
+        font-size: 16px;
+    }
+}
+@media only screen and (min-width:480px) and (max-width: 767px) {
+    body{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width:479px) {
+    body{
+        font-size: 14px;
+    }
+    
+}
+@media only screen and (max-width:399px) {
+    .custom-breakpoint{
+        min-width: 80vw;
+        margin: 0px auto;
+    }
+    
+}
+
+.custom-height{
+    height: calc(100vh - 73px);
+}
+
+::-webkit-scrollbar{
+    scrollbar-width: none;
+}
+
+/* Styles for Slider buttons */
+.slider-container .slick-prev {
+    /* Your Tailwind CSS styles for previous button */
+    opacity: 0;
+    height: 100%;
+    left: 5px;
+    z-index: 10;
+}
+.slider-container .slick-prev:hover{
+    opacity: 1;
+    transition: opacity 1 ease;
+}
+.slider-container .slick-next {
+    /* Your Tailwind CSS styles for previous button */
+    height: 100%;
+    opacity: 0;
+    right: 5px;
+    z-index: 10;
+}
+.slider-container .slick-next:hover{
+    opacity: 1;
+    transition: opacity 1 ease;
+}
+
+.slider-container .slick-dots li button::before {
+    font-size: 10px;
+    opacity: 1;
+    color: rgb(150, 158, 171, 0.5);
+}
+.slider-container .slick-dots li.slick-active button::before {   
+    color: white;
+}
